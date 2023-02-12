@@ -1,0 +1,84 @@
+@import '../../style.scss';
+
+.Rightbar{
+    flex : 3;
+    // border: 2px solid red;
+    position: sticky;
+    top: 55px;
+    height: calc(100vh - 55px);
+    overflow: scroll;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    @include mobile{
+        display: none;
+    }
+    .container{
+        padding: 20px 10px;
+        .item{
+            display: flex;
+            flex-direction: column;
+            -webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.75);
+            
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            span{
+                color: gray;
+                font-size: 14px;
+            }
+            .user{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                // border: 2px solid green;
+                margin: 10px 0px;
+                .userInfo{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    position: relative;
+                    img{
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                    .online{
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        background-color: rgb(76, 238, 76);
+                    }
+                    span{
+                        color: black;
+                    }
+                    p{
+                        color: black;
+                        font-size: 13px;
+                    }
+                }
+                .buttons{
+                    button{
+                        cursor: pointer;
+                        color: white;
+                        background-color: rgb(48, 48, 237);
+                        padding: 5px;
+                        border: none;
+                        border-radius: 3px;
+                    }
+                }
+                span{
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+
+}
